@@ -8,15 +8,12 @@
 
 int binary_tree_is_root(const binary_tree_t *node)
 {
-	binary_tree_t *ptr;
-
-	ptr = node->parent;
 
 	if (node == NULL)
 		return (0);
 
-	if (ptr != NULL ||node != NULL)
-		return (0);
-	else
+	if (node->parent == NULL)
 		return (1);
+	else
+		return (0);
 }
