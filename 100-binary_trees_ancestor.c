@@ -12,6 +12,9 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 	const binary_tree_t *first_ances = first;
 	const binary_tree_t *second_ances = second;
 
+	if (first_ances == NULL && second_ances == NULL)
+		return (NULL);
+
 	while (first_ances != NULL)
 	{
 		second_ances = second;
